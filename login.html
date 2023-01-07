@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="stylesheet" href="css/main.css">
 	<title>Perti Login</title>
 </head>
@@ -35,11 +36,15 @@
 					<h5 class="text-dark text-lg font-bold text-center">
 						¡Bienvenido al Sistema de Gestión de Recursos Humanos!
 					</h5>
+					
 				</div>
 
 				<div class="flex flex-col mb-6 space-y-1">
 					<label for="email" class="text-primaryDark">Correo electrónico</label>
-					<input type="email" name="email" class="text-sm rounded-md p-2 px-2 border border-gray focus:outline-none" placeholder="Ingrese su correo">
+					<div class="flex border rounded-md items-center space-x-4 p-2">
+						<i class="fa-solid fa-user text-ctaDark fa-1x px-2"></i>
+						<input type="email" name="email" class="text-sm focus:outline-none" placeholder="Ingrese su correo">
+					</div>
 				</div>
 
 				<div class="flex flex-col mb-6 space-y-1">
@@ -48,7 +53,11 @@
 						<a href="#" class="text-sm text-dark">¿Olvidaste tu contraseña?</a>
 					</div>
 					
-					<input type="password" name="password" class="text-sm rounded-md p-2 px-2 border focus:outline-none" placeholder="Ingrese su contraseña">
+					<div class="flex border rounded-md items-center space-x-4 p-2">
+						<i class="fa-solid fa-key text-ctaDark fa-1x px-2"></i>
+						<input type="password" name="password" class="text-sm focus:outline-none" placeholder="Ingrese su contraseña">
+					</div>
+					
 				</div>
 
 				<div class="mb-6">
