@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/main.css">
+	<title>Perti Login</title>
+</head>
+<body class="flex flex-col min-h-screen bg-neutralLight">
+
+	<!-- heading -->
+	<section id="logo">
+		<!-- flex container -->
+		<div class="flex flex-col pt-2 items-center bg-dark h-24 mx-auto md:h-48 md:pt-10">
+			<img src="img/logo.svg" alt="">
+			<p class="hidden p-4 text-white text-lg md:block">
+				Gestión de Recursos Humanos
+			</p>
+		</div>
+		<!-- efecto fondo diagonal -->
+		<div class="flex bg-dark h-12">
+			<div class="skew-y-6 h-48 w-full bg-dark"></div>
+			<div class="-skew-y-6 h-48 w-full bg-dark"></div>
+		</div>
+	</section>
+
+	<!-- formulario -->
+	<section id="formulario" class="flex flex-col items-center">
+		<!-- flex container -->
+		<div class="absolute rounded-md bg-white px-8 mx-4 drop-shadow-md md:w-96">
+			
+			<form action="" class="flex flex-col">
+				
+				<div class="m-6">
+					<h5 class="text-dark text-lg font-bold text-center">
+						¡Bienvenido al Sistema de Gestión de Recursos Humanos!
+					</h5>
+				</div>
+
+				<div class="flex flex-col mb-6 space-y-1">
+					<label for="email" class="text-primaryDark">Correo electrónico</label>
+					<input type="email" name="email" class="text-sm rounded-md p-2 px-2 border border-gray focus:outline-none" placeholder="Ingrese su correo">
+				</div>
+
+				<div class="flex flex-col mb-6 space-y-1">
+					<div class="flex justify-between">
+						<label for="password" class="text-primaryDark">Contraseña</label>
+						<a href="#" class="text-sm text-dark">¿Olvidaste tu contraseña?</a>
+					</div>
+					
+					<input type="password" name="password" class="text-sm rounded-md p-2 px-2 border focus:outline-none" placeholder="Ingrese su contraseña">
+				</div>
+
+				<div class="mb-6">
+          <button type="submit" class="p-3 text-white font-bold rounded-md bg-cta w-full hover:bg-ctaLight">Iniciar Sesión</button>
+        </div>
+				
+			</form>			
+		</div>
+	</section>
+
+	<!-- footer -->
+	<footer class="bg-light mt-auto">
+		<div class="mx-auto py-4 text-center text-dark">
+			© 2022  by Grupo PerTI
+		</div>
+	</footer>
+
+	<script src="js/main.js"></script>
+</body>
+</html>
