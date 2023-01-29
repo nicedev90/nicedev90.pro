@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="css/main.css">
+	<title>navbar creator</title>
+</head>
+<body>
+
+	<div class="flex flex-col mx-auto max-w-6xl space-y-5 ">
+		<div id="nav-wrapper">
+			<nav id="custom-navbar" class="flex">
+				<a href="#">Home</a>
+				<a href="#">Events</a>
+				<a href="#">About Us</a>
+			</nav>
+		</div>
+
+		<button id="btn-add" class="w-44 p-3 font-bold text-lg rounded-xl text-white bg-dark">Agregar </button>
+
+		<div id="buttons-panel" class="flex justify-between p-2">
+
+			<div class="flex flex-col space-y-3">
+				<button class="p-2 bg-primaryDark text-white">Direction</button>
+				<button id="setClass" class="p-2 rounded-lg text-dark bg-neutral">flex-col</button>
+			</div>
+
+			<div class="flex flex-col space-y-3">
+				<button class="p-2 bg-primaryDark text-white">Main Axis</button>
+				<button id="setClass" class="p-2 rounded-lg text-dark bg-neutral">items-start</button>
+				<button id="setClass" class="p-2 rounded-lg text-dark bg-neutral">items-center</button>
+				<button id="setClass" class="p-2 rounded-lg text-dark bg-neutral">items-end</button>
+			</div>
+
+			<div class="flex flex-col space-y-3">
+				<button class="p-2 bg-primaryDark text-white">Cross Axis</button>
+				<button id="setClass" class="p-2 rounded-lg text-dark bg-neutral">justify-between</button>
+				<button id="setClass" class="p-2 rounded-lg text-dark bg-neutral">justify-around</button>
+				<button id="setClass" class="p-2 rounded-lg text-dark bg-neutral">justify-center</button>
+			</div>
+
+			<div class="flex flex-col space-y-3">
+				<button class="p-2 bg-primaryDark text-white">Height</button>
+				<button id="setClass" class="p-2 rounded-lg text-dark bg-neutral">h-16</button>
+				<button id="setClass" class="p-2 rounded-lg text-dark bg-neutral">h-24</button>
+				<button id="setClass" class="p-2 rounded-lg text-dark bg-neutral">h-44</button>
+			</div>
+
+			<div class="flex flex-col space-y-3">
+				<button class="p-2 bg-primaryDark text-white">Width</button>
+				<button id="setClass" class="p-2 rounded-lg text-dark bg-neutral">w-full</button>
+				<button id="setClass" class="p-2 rounded-lg text-dark bg-neutral">w-64</button>
+				<button id="setClass" class="p-2 rounded-lg text-dark bg-neutral">w-96</button>
+			</div>
+
+			<div class="flex flex-col space-y-3">
+				<button class="p-2 bg-primaryDark text-white">Margin</button>
+				<button id="setClass" class="p-2 rounded-lg text-dark bg-neutral">mx-auto</button>
+				<button id="setClass" class="p-2 rounded-lg text-dark bg-neutral">mx-6</button>
+				<button id="setClass" class="p-2 rounded-lg text-dark bg-neutral">mx-10</button>
+			</div>
+
+			<div class="flex flex-col space-y-3">
+				<button class="p-2 bg-primaryDark text-white">Padding</button>
+				<button id="setClass" class="p-2 rounded-lg text-dark bg-neutral">p-2</button>
+				<button id="setClass" class="p-2 rounded-lg text-dark bg-neutral">p-5</button>
+				<button id="setClass" class="p-2 rounded-lg text-dark bg-neutral">p-8</button>
+			</div>
+
+			<div class="flex flex-col space-y-3">
+				<button class="p-2 bg-primaryDark text-white">BG</button>
+				<button id="setClass" class="p-2 rounded-lg text-dark bg-neutral">bg-primary</button>
+				<button id="setClass" class="p-2 rounded-lg text-dark bg-neutral">bg-neutral</button>
+				<button id="setClass" class="p-2 rounded-lg text-dark bg-neutral">bg-cta</button>
+			</div>
+
+			<div class="flex flex-col space-y-3">
+				<button class="p-2 bg-primaryDark text-white">BG Hover</button>
+				<button id="setClass" class="p-2 rounded-lg text-dark bg-neutral">prim Light</button>
+				<button id="setClass" class="p-2 rounded-lg text-dark bg-neutral">neut Light</button>
+				<button id="setClass" class="p-2 rounded-lg text-dark bg-neutral">cta Light</button>
+			</div>
+
+			<div class="flex flex-col space-y-3">
+				<button class="p-2 bg-primaryDark text-white">font Style</button>
+				<button id="setClass" class="p-2 rounded-lg text-dark bg-neutral">font-bold</button>
+				<button id="setClass" class="p-2 rounded-lg text-dark bg-neutral">font-light</button>
+			</div>
+
+			<div class="flex flex-col space-y-3">
+				<button class="p-2 bg-primaryDark text-white">font Size</button>
+				<button id="setClass" class="p-2 rounded-lg text-dark bg-neutral">text-sm</button>
+				<button id="setClass" class="p-2 rounded-lg text-dark bg-neutral">text-xl</button>
+			</div>
+
+
+		</div>
+
+		<button id="btn-code" class="w-44 p-3 font-bold text-lg rounded-xl text-white bg-dark"> CODIGO</button>
+
+		<div id="code" class="flex w-3/4 mx-auto rounded-lg p-3 bg-neutralDark">
+			
+		</div>
+
+	</div>
+
+
+
+	<script>
+		window.addEventListener('DOMContentLoaded', () => {
+
+			const btnClass = document.querySelectorAll('#setClass')
+			btnClass.forEach((btn) => {
+				btn.addEventListener('click', setClass)
+			})
+		})
+
+		const customNav = document.querySelector('#custom-navbar')
+		const code = document.querySelector('#code')
+
+		const navWrapper = document.querySelector('#nav-wrapper')
+		const btnCode = document.querySelector('#btn-code')
+		btnCode.addEventListener('click', () => {
+			code.innerText = navWrapper.innerHTML
+		})
+
+		const setClass = (e) => {
+			const btn = e.target
+			const nameClass = e.target.innerText
+			btn.classList.toggle('bg-neutral')
+			btn.classList.toggle('text-dark')
+			btn.classList.toggle('bg-ctaDark')
+			btn.classList.toggle('text-white')
+			customNav.classList.toggle(nameClass)
+			console.log(nameClass)
+		}
+
+			
+		
+		const btnAdd = document.querySelector('#btn-add')
+
+		btnAdd.addEventListener('click', () => {
+			const a = document.createElement('a')
+			a.setAttribute('href', '#')
+			a.innerText = 'Item'
+			customNav.prepend(a)
+		})
+
+	</script>
+</body>
+</html>
