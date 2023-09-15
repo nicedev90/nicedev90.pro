@@ -1,46 +1,50 @@
-  <!-- footer -->
-  <footer class="bg-primaryDark text-white mt-auto">
-    <div class="flex flex-col items-start justify-around px-6 md:px-16 md:flex-row">
+<div class=" w-full bg-neutralDark">	
+	<!-- footer -->
+  <footer class="md:w-78 md:px-10 mx-auto flex flex-col text-dark mt-auto bg-white md:border-t md:border-dark ">
+  	<div class="flex flex-col-reverse items-start justify-around md:flex-row">
 
-    	<div class="flex flex-col w-full items-center space-y-4 py-4 justify-start border-dark border-b-2 md:border-none md:w-1/2">
+  		<!-- author section visible only mobile -->
+		  <div class="md:hidden p-2 flex w-full justify-around text-center text-sm text-dark border-t border-cta font-lexend">
+		  	<div class="w-1/3 flex items-center">
+					<a href="<?php echo URLROOT . '/' . $data['controller'] . '/index'?>" class=" text-2xl text-dark  font-semibold text-center"> niceDev90 	</a>
+			  </div>
+	    	<div class="flex flex-col justify-center items-center">
+	    		<span>Derechos Reservados &nbsp; </span>
+		    	<a href="https://nicedev90.pro">	 &copy;nicedev90 - Web Designer</a> 
+	    	</div>
+	    </div>
 
-    		<div id="btn-acordion" class="relative flex justify-start items-center md:cursor-default cursor-pointer">
-    			<div class="text-xl font-irish">Contactos</div>
-    			<i class="fas fa-chevron-up ml-4 md:hidden"></i>
-    		</div>
 
-    		<div class="hidden md:block left-0 right-0 flex flex-col w-full md:w-1/2 space-y-2">
+  		<!-- col izq  -->
+  		<div class="p-2 flex justify-around items-center w-full md:w-1/2 md:border-r border-cta border-t md:border-t-0 ">
+  			<h2 class="text-2xl font-bold font-lexend ">Contacto</h2>
+ 				<div class="flex flex-col space-y-2 font-lexend">
+ 					<p>	<i class="fas fa-phone mr-2 "></i> +51 992-819-526</p>
+    			<p>	<i class="fas fa-envelope mr-2 "></i> contacto@nicedev90.pro </p>
+ 				</div>
+  		</div>
 
-		    	<a class="flex px-6 items-center justify-between hover:bg-cta hover:rounded-full hover:text-dark" href="<?php echo URLROOT . '/' . $data['controller'] . '/about' ?>" >
-						<img src="<?php echo URLROOT; ?>/img/autor1.png" alt="imagen logo" class=" h-12">
-						<p>Ilustrador</p>
-					</a>
+  		<!-- col der -->
+  		<div class="hidden py-4 px-2  md:flex justify-around items-center w-full md:w-1/2  text-dark ">
+  		  <!-- author section only visible on desktop -->
+		  	<a href="<?php echo URLROOT . '/' . $data['controller'] . '/index'?>" class="text-4xl text-dark  font-semibold text-center"> niceDev90 	</a>
 
-					<a class="flex px-6 items-center justify-between hover:bg-cta hover:rounded-full hover:text-dark" href="<?php echo URLROOT . '/' . $data['controller'] . '/about' ?>" >
-						<img src="<?php echo URLROOT; ?>/img/autor2.png" alt="imagen logo" class=" h-12">
-						<p>Escritor</p>
-					</a>
-    		</div>
+	    	<div class="flex flex-col justify-center items-center font-lexend">
+	    		<span>Derechos Reservados &nbsp; </span>
+		    	<a href="https://nicedev90.pro">	 &copy; nicedev90 - Full Stack Developer</a> 
+	    	</div>
+  		  
+  		</div>
 
-    	</div>
-
-    	<div class="flex flex-col w-full items-center space-y-4 py-4 justify-start md:w-1/2 ">
-    		<div id="btn-acordion" class="relative flex justify-start items-center md:cursor-default cursor-pointer">
-    			<div class="text-xl font-irish">Informacion de la tienda</div>
-    			<i class="fas fa-chevron-up ml-4 md:hidden"></i>
-    		</div>
-
-    		<div class="hidden md:block left-0 right-0 flex flex-col w-full md:w-1/2 space-y-2">
-	    		<a class="flex p-2 items-center justify-between hover:border-cta hover:border-b-2 " href="<?php echo URLROOT . '/' . $data['controller'] . '/aviso' ?>" ><p>Aviso Legal</p>	</a>
-					<a class="flex p-2 items-center justify-between hover:border-cta hover:border-b-2 " href="<?php echo URLROOT . '/' . $data['controller'] . '/terminos' ?>" >	<p>Téminos y Condiciones</p></a>
-    		</div>
-
-    		<a href="<?php echo URLROOT . '/' . $data['controller'] . '/index' ?>"  class="w-full md:border-none text-center text-xl font-light"><?php echo APPNAME . '  &copy;  ' .  date("Y")?></a>
-
-    	</div>
-
+  		
     </div>
+
+
+  	
   </footer>
+
+</div>
+
 
 
 	<script src="<?php echo URLROOT; ?>/js/main.js"></script>

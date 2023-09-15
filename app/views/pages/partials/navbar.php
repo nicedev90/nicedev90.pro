@@ -1,64 +1,50 @@
-<nav class="hidden md:flex md:px-16 bg-primaryDark text-lg text-white tracking-wider font-irish">
-	<div class="flex w-1/4 items-start">
-		<a href="<?php echo URLROOT . '/' . $data['controller'] . '/index'?>"><img src="<?php echo URLROOT; ?>/img/logo.png" alt="imagen logo" class="ml-4 w-16 h-16"></a>
+	<nav class="relative sticky top-0 z-50   w-full bg-neutralDark">
+
+	<div class="md:w-78 md:px-10 mx-auto flex justify-between items-center py-2 font-lexend text-cta bg-white drop-shadow-md">
+		<div class="flex items-center w-1/3 md:w-1/4 h-12 ">
+			<a href="<?php echo URLROOT . '/' . $data['controller'] . '/index'?>" class="px-2 md:px-0 text-2xl md:text-4xl text-dark  font-semibold text-center"> niceDev90 	</a>
+	  </div>
+
+	  <div class="hidden md:flex w-1/2 items-center justify-between text-xl ">
+	  	
+	    <li class="list-none">
+	      <a class="p-2 <?= ($data['page'] == 'index') ? 'border-b-4 border-dark' : 'hover:border-b-4 hover:border-dark'; ?> " href="<?php echo URLROOT . '/' . $data['controller'] . '/index'?>"> Home</a>
+	    </li>
+	
+	    <li class="list-none">
+	      <a class="p-2 <?= ($data['page'] == 'blog') ? 'border-b-4 border-dark' : 'hover:border-b-4 hover:border-dark'; ?>  " href="https://blog.nicedev90.pro">Blog </a>
+	    </li>
+	
+	    <li class="list-none ">
+	      <a class="p-2 <?= ($data['page'] == 'about') ? 'border-b-4 border-dark' : 'hover:border-b-4 hover:border-dark'; ?> " href="<?php echo URLROOT . '/' . $data['controller'] . '/about' ?>">About Me</a>
+	    </li>
+
+			<a href="<?php echo URLROOT . '/' . $data['controller'] . '/login' ?>" class="rounded-full  text-xl px-6 py-2 md:w-max w-3/4  transition-all duration-500 bg-ctaLight text-white hover:bg-ctaDark"> Contacto </a>
+	  </div>
+
+	  <div class="md:hidden">
+	  	<a href="<?php echo URLROOT . '/' . $data['controller'] . '/login' ?>" class="rounded-full  text-lg px-6 py-2 w-max  transition-all duration-500 bg-cta text-white"> Contacto </a>
+	  </div>
+
+	 	<!-- mobile mobile-menu button -->
+	  <button id="mobile-btn" class="md:hidden block mobile-menu focus:outline-none mr-2">
+	    <span class="mobile-menu-top bg-ctaDark"></span>
+	    <span class="mobile-menu-middle bg-ctaDark"></span>
+	    <span class="mobile-menu-bottom bg-ctaDark"></span>
+	  </button>
 	</div>
 
-	<div class="hidden md:flex w-full items-center space-x-4 justify-end">
-		<li class="list-none">
-			<a class="p-3 <?= ($data['page'] == 'index1') ? 'is-active' : 'is-inactive'; ?>" href="<?php echo URLROOT . '/' . $data['controller'] . '/index'?>"> INICIO</a>
-		</li>
+	<!-- END MOBILE MENU -->
+	</nav>
 
-		<li class="list-none">
-			<a class="p-3 <?= ($data['page'] == 'galeria') ? 'is-active' : 'is-inactive'; ?>" href="<?php echo URLROOT . '/' . $data['controller'] . '/galeria/' . $data['project_name'] ?>"> CAPITULOS</a>
-		</li>
+		<div class="md:hidden">
+			<div id="mobile-menu" class="hidden absolute top-16 z-50 flex-col items-center left-0 right-0 text-white bg-ctaLight text-lexend text-xl  divide-neutral divide-y">
+		    <a href="<?php echo URLROOT . '/' . $data['controller'] . '/index'?>" class=" w-full text-center py-3  hover:bg-ctaDark">Home</a>
+		    <a href="https://blog.nicedev90.pro" class=" w-full text-center py-3  hover:bg-ctaDark">Blog</a>
+		    <a href="<?php echo URLROOT . '/' . $data['controller'] . '/about' ?>" class="w-full text-center py-3  hover:bg-ctaDark">About Me</a>
 
-		<li class="list-none ">
-			<a class="p-3 <?= ($data['page'] == 'about-us') ? 'is-active' : 'is-inactive'; ?>" href="<?php echo URLROOT . '/' . $data['controller'] . '/about' ?>"> AUTOR</a>
-		</li>
+		  </div>
+		</div>
 
-		<li class="list-none">
-			<a class="p-3 <?= ($data['page'] == 'about-us') ? 'is-active' : 'is-inactive'; ?>" href="<?php echo URLROOT . '/' . $data['controller'] . '/login' ?>">
-				<i class="fa-solid fa-user fa-1x"></i> INICIAR SESION
-			</a>
-		</li>
-	</div>
-</nav>
 
-<!-- BEGIN MOBILE MENU -->
-<nav id="navbar-mobile" class="flex justify-around bg-primaryDark md:hidden">
-  <div id="logo-mobile" class="w-1/4">
-		<a href="<?php echo URLROOT . '/' . $data['controller'] . '/index'?>"><img src="<?php echo URLROOT; ?>/img/logo.png" alt="imagen logo" class="w-12 h-12"></a>
-	</div>
 
-	<div class="bg-cta rounded-t-xl text-white hover:text-dark">
-		<a href="<?php echo URLROOT . '/' . $data['controller'] . '/login' ?>" class="flex p-2 space-x-2 items-center justify-center">
-			<i class="fa-solid fa-user fa-1x text-xl"></i> 
-			<span class="text-xl">Iniciar Sesion </span>
-		</a>
-	</div>
-
-  <!-- mobile hamburger button -->
-  <button id="mobile-btn" class="mx-3 block hamburger focus:outline-none">
-    <span class="hamburger-top bg-cta"></span>
-    <span class="hamburger-middle bg-cta"></span>
-    <span class="hamburger-bottom bg-cta"></span>
-  </button>
-</nav>
-
-<!-- mobile hamburger menu -->
-<div class="md:hidden">
-  <div id="mobile-menu" class="hidden bg-primary divide-y flex-col items-center text-xl text-white left-0 right-0 tracking-wider font-irish">
-  	<a href="<?php echo URLROOT . '/' . $data['controller'] . '/index'?>" class="w-full text-center py-4 hover:bg-ctaLight hover:text-dark">Inicio</a>
-  	<a href="<?php echo URLROOT . '/' . $data['controller'] . '/galeria/' . $data['project_name'] ?>" class="w-full text-center py-4 hover:bg-ctaLight hover:text-dark">Capitulos</a>
-    <a href="<?php echo URLROOT . '/' . $data['controller'] . '/about' ?>" class="w-full text-center py-4 hover:bg-ctaLight hover:text-dark">Autor</a>
-  </div>
-</div>
-<!-- END MOBILE MENU -->
-
-<!-- banner encabezado -->
-<div class="flex relative">
-	<img src="<?php echo URLROOT; ?>/img/banner.png" alt="imagen logo" class="md:h-44 object-cover w-screen">
-	<div class="w-1/3 md:w-1/4 absolute m-auto left-0 right-0 bottom-1">
-		<img src="<?php echo URLROOT; ?>/img/logo-letra.png" alt="imagen logo" class="">
-	</div>
-</div>
