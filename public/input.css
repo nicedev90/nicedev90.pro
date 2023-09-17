@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+._video {
+  @apply w-full p-4 md:w-1/2 overflow-hidden;
+}
+
+._video video {
+  @apply w-full h-full;
+}
+
+
+.input-group {
+  @apply flex flex-col py-2 space-y-2;
+}
+
+/*.input-group input[type=text] {
+  @apply p-4;
+}
+*/
+
+form {
+  @apply p-4 font-lexend text-dark border border-cta rounded-xl text-lg;
+}
+.input-group input {
+  @apply px-4 py-1 bg-neutral outline-none focus:border-b-2 focus:border-cta;
+}
+
+.input-group label {
+  @apply font-semibold ;
+}
+
+.input-group button {
+  @apply mt-6 p-4 bg-cta text-white font-bold tracking-wider  rounded-xl;
+}
+
+@font-face {
+  font-family: "Kanit", sans-serif;
+  font-family: "Lexend Deca", sans-serif;
+  font-family: "Pathway Extreme", sans-serif;
+  font-family: "Urbanist", sans-serif;
+  font-family: "DM Sans", sans-serif;
+}
+
+/* mobile menu */
+
+.mobile-menu {
+  position: relative;
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.mobile-menu-top,
+.mobile-menu-middle,
+.mobile-menu-bottom {
+  position: absolute;
+  width: 2rem;
+  height: 3px;
+  top: 0.5rem;
+  right: 0;
+  transform: rotate(0);
+  transition: all 0.25s;
+}
+
+.mobile-menu-middle {
+  transform: translateY(10px);
+}
+
+.mobile-menu-bottom {
+  transform: translateY(20px);
+}
+
+.open {
+  transform: rotate(90deg);
+  transform: translateY(0px);
+}
+
+.open .mobile-menu-top {
+  transform: rotate(45deg) translateY(6px) translate(6px);
+}
+
+.open .mobile-menu-middle {
+  display: none;
+}
+
+.open .mobile-menu-bottom {
+  transform: rotate(-45deg) translateY(6px) translate(-6px);
+}
+
+.sub-open {
+  transform: translateY(0.25rem);
+  transform-origin: top;
+  transition-duration: 400ms;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in 1 forwards;
+}
+
